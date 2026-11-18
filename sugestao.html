@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sugira um evento ou data especial para o Calendário Municipal de Capanema.">
+  <title>Sugerir evento | Calendário Municipal de Capanema</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sugerir evento ou data especial</h1>
+    <p>Calendário Municipal de Capanema</p>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="index.html">Início</a>
+      <a href="outubro.html">Outubro</a>
+      <a href="novembro.html">Novembro</a>
+      <a href="dezembro.html">Dezembro</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h3>Conte para a gente</h3>
+      <p>
+        Preencha o formulário abaixo com as informações do evento ou da data especial.
+        Os campos com * são obrigatórios.
+      </p>
+    </section>
+
+    <!-- Troque o e-mail abaixo pelo e-mail que vai receber as sugestões -->
+    <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
+
+      <fieldset>
+        <legend>Seus dados</legend>
+
+        <div class="campo">
+          <label for="nome">Seu nome *</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">Seu e-mail *</label>
+          <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Dados do evento</legend>
+
+        <div class="campo">
+          <label for="evento">Nome do evento ou da data *</label>
+          <input type="text" id="evento" name="evento" placeholder="Ex.: Festa da comunidade" required>
+        </div>
+
+        <div class="campo">
+          <label for="tipo">Tipo *</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecione uma opção</option>
+            <option value="evento-local">Evento local</option>
+            <option value="data-comemorativa">Data comemorativa</option>
+            <option value="feriado">Feriado</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="linha">
+          <div class="campo">
+            <label for="data">Data *</label>
+            <input type="date" id="data" name="data" min="2026-10-01" max="2026-12-31" required>
+          </div>
+
+          <div class="campo">
+            <label for="horario">Horário</label>
+            <input type="time" id="horario" name="horario">
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="local">Local</label>
+          <input type="text" id="local" name="local" placeholder="Ex.: Praça central de Capanema">
+        </div>
+
+        <div class="campo">
+          <label for="descricao">Descrição *</label>
+          <textarea id="descricao" name="descricao" rows="5" placeholder="Conte um pouco sobre o evento ou a data" required></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Como você quer ser avisado?</legend>
+        <p class="opcoes">
+          <label><input type="radio" name="retorno" value="sim" checked> Quero receber uma resposta por e-mail</label>
+          <label><input type="radio" name="retorno" value="nao"> Não preciso de resposta</label>
+        </p>
+      </fieldset>
+
+      <div class="campo-check">
+        <input type="checkbox" id="confirmo" name="confirmo" required>
+        <label for="confirmo">Confirmo que as informações enviadas são verdadeiras. *</label>
+      </div>
+
+      <div class="botoes-form">
+        <button type="submit" class="botao botao-destaque">Enviar sugestão</button>
+        <button type="reset" class="botao botao-cinza">Limpar</button>
+      </div>
+
+    </form>
+
+  </main>
+
+  <footer>
+    <p>Calendário Municipal de Capanema/PR &bull; 4º trimestre de 2026</p>
+    <p>Projeto escolar da disciplina de Desenvolvimento Web</p>
+  </footer>
+
+</body>
+</html>
